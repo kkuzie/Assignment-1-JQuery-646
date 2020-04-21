@@ -20,6 +20,10 @@ $("#btnStep1").click(function(){
     //     }.bind(this);   
     //  });  
 
+    $("#btnStep2").bind("click",function(){ 
+        alert("You clicked Step 2");  
+    }); 
+
 //STEP 3 DONE
 // Create a button on a web page. Attach the click event using the .on() method to display an alert message to the user indicating that the button has been clicked when the button is actually clicked. 
 
@@ -165,6 +169,7 @@ $('#btnStep10').click(function(e) {
     } else {
         $('input#email10').css({border: "5px solid limegreen"});
     }
+    $('#addInput')[0].reset()
     })
 
 
