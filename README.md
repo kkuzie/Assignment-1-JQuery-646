@@ -1,1 +1,1 @@
-# Assignment-1-JQuery-646
+# Assignments-JQuery-646
