@@ -1,0 +1,66 @@
+body {
+    background: #2f1061;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button, #step10 {
+    display: block;
+    color: crimson;
+    font-size: 30px;
+    margin: 20px auto;
+    border: 0;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+a {
+    text-decoration: none;
+}
+/* p{
+    width: 300px;
+    font-size: 20px;
+    color: #fff;
+    margin: 20px auto;
+} */
+input, select {
+    display: block;
+    width: 400px;
+    margin: 20px auto;
+    font-size: 30px;
+    border-radius: 3px;
+}      
+#divStep6, #divStep5, #divStep8 {
+    margin: auto;
+    border: 3px dotted crimson;
+    position: relative;
+    color: crimson;
+    font-size: 30px;
+}
+#divin, .divin  {
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 75px;
+    font-size: 30px;
+    color: #fff;
+}
+#divout, .divout {
+    align-items: center;
+    position: absolute;
+    top: 175px;
+    left: 50px;
+    font-size: 30px;
+    color: #fff;
+} 
+#divclick, .divclick {
+    position: absolute;
+    top: 250px;
+    left: 85px;
+    font-size: 30px;
+    color: #fff;
+}
+#divStep8 {
+    width: 400px;
+    height: auto;
+    border: 3px dashed crimson;
+    border-radius: 10%;
+    padding: 10px;
+}
