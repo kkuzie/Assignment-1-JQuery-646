@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vecta Corp. - 24/7 365 turnkey vSolutions for agile eBusinesses</title>
+  <link href="styles/normalize.css" type="text/css" rel="stylesheet">
+  <link href="styles/styles.css" type="text/css" rel="stylesheet">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- GENERAL -->
+<!-- Find the jQuery library, download it, and reference it from within the Vecta Corp. web page. Do not use the CDN, use the downloadable library. -->
+
+  <script src="scripts/jquery-3.5.0.js"></script>
+  <script src="scripts/scripts.js"></script>
+
+  <script>
+//Create a document ready function within an embedded script block in your web page. This is where you’ll write your code.
+	  $(document).ready(function(){
+
+//THE HEADINGS		
+//Select the <h2> elements within the <section> and <aside> tags and apply a CSS solid, black, 1px border to them.
+	$('section h2').css({border: '1px solid black'});
+	$('aside h2').css({border: '1px solid black'});
+
+// Select the <h2> elements within the <section> and <aside> tags and apply a color of #CC1C0D to them.
+	$('section h2').css({color: '#CC1C0D'});
+	$('aside h2').css({color: '#CC1C0D'});
+
+// Select the <h2> elements within the <section> and <aside> tags and apply a padding of 3px to the top and bottom and 20px to the left side.
+	$('section h2').css({padding: '3px 0 3px 20px'});
+	$('aside h2').css({padding: '3px 0 3px 20px'});
+	
+// Select the <h2> elements within the <section> and <aside> tags and apply a border radius of 5px to the top right and bottom left corners only.
+	$('section h2').css({borderRadius: '0 5px'});
+	$('aside h2').css({borderRadius: '0 5px'});
+
+// Select the <h2> elements within the <section> and <aside> tags and apply a background color of #DFE3E6.
+	$('section h2').css({backgroundColor: '#DFE3E6'});
+	$('aside h2').css({backgroundColor: '#DFE3E6'});
+
+//THE NAVIGATION MENU
+// 	Programmatically add the class “navigation” to each of the 5 navigation menu items.
+	$("li").addClass("navigation");
+
+// Select the navigation classes and apply a CSS solid, #929CA4, 1px border to them.
+	$(".navigation").css({border: '1px solid #929CA4'});
+
+// Select the navigation classes and apply a color of #CC1C0D to them.
+	$('.navigation').css({color: '#CC1C0D'});
+
+// Select the navigation classes and apply a padding of 3px to the top and bottom and 20px to the left side.
+	$('.navigation').css({padding: '3px 0 3px 20px'});
+
+// Select the navigation classes and apply a background color of #DFE3E6.
+	$('.navigation').css({backgroundColor: '#DFE3E6'});
+
+//MAIN CONTENT
+// Programmatically remove the vprospect, vconvert, and vretain classes from the <p> tags in the main <section> tag.
+	$('section p').removeClass('vprospect');
+	$('section p').removeClass('vconvert');
+	$('section p').removeClass('vretain');
+	
+// Programmatically add the text “Chevy Dealers Association” after the word “President” in the client testimonials section. Make sure to programmatically add a line break after the word “President” so that the new text you’re adding is placed directly underneath.
+	$('aside p:last').append('<br> Chevy Dealers Association');
+
+// Programmatically wrap the testimonial verbiage with a <q> tag.
+	$("aside p:first").wrap("<q>");
+
+	  });//closing tag for line 11 document ready
+
+  </script>
+</head>
+
+<body>
+	<main>
+		<header></header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Solutions</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+		<section>
+			<h2>Welcome</h2>
+
+			<p>With innovative approaches and advanced methodologies, <b>Vecta Corporation</b> provides scalable business solutions to help companies achieve success through revenue increase, cost management, and user satisfaction. Our approach stems from the three most important business growth aspects: helping companies reach prospects, assist in converting prospects to customers, and assist in retaining those customers. This is accomplished through our interactive solutions and expertise in providing a memorable and positive user experience.</p>
+			
+			<h2>Our Solutions</h2> 
+			
+			<p class="vprospect">vProspect 2.0<br>
+			Define and research your target audience, define your strategy to reach that audience and present a strong and memorable brand to that audience.</p>
+			
+			<p class="vconvert">vConvert 2.0<br>
+			Create a highly user-friendly and easy-to-navigate information architecture that will help your prospects interact with the company on a highly interactive level.</p>
+			
+			<p class="vretain">vRetain 1.0<br>
+			Build on existing customer relationships to improve productivity and maximize customer loyalty, while growing revenues.</p>
+		</section>
+		<aside>
+			<h2>Client Testimonials</h2>
+			
+			<p>Throughout the years we have worked with Vecta Corporation, we have always been amazed at the level of dedication and professionalism that they have provided us and our WGDC products. It is this commitment that has increased both our income and exposure exponentially.</p>
+			
+			<p>Iona Ford<br>
+			President</p>
+		</aside>
+		<footer></footer>
+	</main>
+
+</body>
+</html>
