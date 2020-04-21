@@ -103,12 +103,20 @@ $("#step9").focusout(function () {
 // When the user submits the form, if any one of the two fields is left empty, display an alert box to the user indicating that the fields are required. 
 // Give the field that the user left empty a red border. If both fields have values in them, set their borders to green.
 
-$(".step10").focus(function(){
-    $(this).css({border: "5px solid limegreen"}); 
+$("#text10").focus(function(){
+    $(this).css({border: "5px solid orange"}); 
 });
-$(".step10").focusout(function(){
+$("#text10").focusout(function(){
     $(this).css({border: "none"}); 
 });
+
+$("#email10").focus(function(){
+    $(this).css({border: "5px solid orange"}); 
+});
+$("#email10").focusout(function(){
+    $(this).css({border: "none"}); 
+});
+
 
 // $('#btnStep10').click(function (e) {
 //     e.preventDefault();
@@ -125,19 +133,39 @@ $(".step10").focusout(function(){
 //             $("input[name='email']").css({border: "5px solid limegreen"});
 //         }
 // });
-if ($('#addInput input[name="text"]') == ''){
-$('input[name="text"]').css({border: '5px solid red'});
-}
+// if ($('#addInput input[name="text"]') == ''){
+// $('input[name="text"]').css({border: '5px solid red'});
+// }
 
-$('#btnStep10').click(function (e) {
-    e.preventDefault();
-        if ($('#addInput input[name="text"]') == ''){
-            console.log($('#addInput input[name="text"'));
-            alert(" empty input");
-            $('input[name="text"]').css({border: '5px solid red'});
-        }
-    });
+// $('#btnStep10').click(function () {
+//     // e.preventDefault();
+//         if($('#addInput input[name="text"]') == ''){
+//             // console.log($('#addInput input[name="text"'));
+//             // alert(" empty input");
+//             // $('input[name="text"]').css({border: '5px solid red'});
+//         }
+//     });
     
+$('#btnStep10').click(function(e) {
+    e.preventDefault();
+    console.log("button clicked");
+    let text = $('input#text10').val();
+    let email = $('input#email10').val()
+    console.log(text);
+    console.log(email);
+    if (text == ""){
+        alert('complete text field');
+        $('input#text10').css({border: "5px solid crimson"});
+    } else {
+        $('input#text10').css({border: "5px solid limegreen"});
+    }
+    if (email ==""){
+        alert('complete email field');
+        $('input#email10').css({border: "5px solid crimson"});
+    } else {
+        $('input#email10').css({border: "5px solid limegreen"});
+    }
+    })
 
 
 
