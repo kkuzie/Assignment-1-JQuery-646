@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- JQUERY -->
+	<!-- <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+		rel = "stylesheet"> -->
+	<!-- JQ CSS -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<!-- css modifications by karen -->
+	<link rel="stylesheet" href="css/karen.css">
+
+	<!-- jquery and jqueryui-->
+	<script src="/assignment2/vectacorp/js/jquery-3.5.0.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<!--  GENERAL - add tooltip widget to each nav item -->
+	<script>
+		$(document).ready(function () {
+					$(function () {
+						$(".navitems").tooltip();
+					});
+
+					// Step 7/8 - radio & check box buttons
+					$(function () {
+						$(".radiobtn").checkboxradio();
+					});
+
+					// Step 9 - dropdown
+					$(function () {
+						$("#companysize").selectmenu();
+					});
+
+					//Step 10 - submit
+					//for ZACS code
+					$(function () {
+						$("input[type=submit]").button();
+						$("#submitbtn").button();
+					});
+
+					//for WIDGET code
+						// $(function () {
+						// 	$(".widget input[type=submit], .widget a, .widget button").button();
+							//****THIS FUNCTION for CSS widget will messup NAVBAR
+							// 	$("button, input, a").click(function (event) {
+							// 		event.preventDefault();
+							// });
+						// });
+
+						//L code
+							// $(function () {
+							// 	$(".widget input[type=submit], .widget a, .widget button").button();
+							// });
+
+						}); //closing for document ready line 27
+	</script>
+
+	<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script>
+		$(document).ready(function () {
+		$('#responsive-menu').mobileMenu();
+		});
+	</script>
+</head>
+
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<!--  GENERAL - add tooltip widget to each nav item -->
+				<li class="navitems" title='Find everything you need under one roof'><a href="index.html">Home</a></li>
+				<li class="navitems" title="Who we are, what we do"><a href="aboutus.html">About Us</a></li>
+				<li class="navitems" title="We have the perfect solution for your needs"><a
+						href="solutions.html">Solutions</a></li>
+				<li class="navitems" title="Help! When you need somebody..."><a href="support.html">Support</a></li>
+				<li class="navitems" title="Talk to us"><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+
+		<section id="welcome" class="eleven columns">
+			<h4>Contact Us</h4>
+			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+				<fieldset>
+					<legend>Contact a Sales Representative</legend>
+					Name:
+					<input type="text" name="name" maxlength="30" required="">
+					Company Name:
+					<input type="text" name="companyname" maxlength="30" required="">
+					Phone:
+					<input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+						title="Format: 555-555-5555">
+
+					Email:
+					<input type="email" name="email" maxlength="30" required="">
+
+					What VectaCorp products are you interested in?<br>
+					<label for="vProspect">vProspect 2.0</label>
+					<input class="radiobtn" type="checkbox" name="product" value="vProspect" id="vProspect">
+					<label for="vConvert">vConvert 2.0</label>
+					<input class="radiobtn" type="checkbox" name="product" value="vConvert" id="vConvert">
+					<label for="vRetain">vRetain 1.0</label>
+					<input class="radiobtn" type="checkbox" name="product" value="vRetain" id="vRetain">
+
+					<br><br>
+					What is your current infrastructure?<br>
+					<label for="Mac">Mac</label>
+					<input class="radiobtn" type="radio" name="infrastructure" value="Mac" id="Mac">
+					<label for="Linux">Linux</label>
+					<input class="radiobtn" type="radio" name="infrastructure" value="Linux" id="Linux">
+					<label for="Unix">Unix</label>
+					<input class="radiobtn" type="radio" name="infrastructure" value="Unix" id="Unix">
+					<label for="Windows">Windows</label>
+					<input class="radiobtn" type="radio" name="infrastructure" value="Windows" id="Windows">
+
+					<br><br>
+					How many employees do you have?<br>
+					<select name="companysize" id='companysize'>
+						<option value="1-10">1-10</option>
+						<option value="11-100">11-100</option>
+						<option value="101-1000">101-1000</option>
+						<option value="More than 1000">More than 1000</option>
+					</select>
+
+					<br><br>
+
+					How did you hear about us?
+					<select name="hearaboutus" multiple="" size="5" id="hearabout">
+						<option value="Magazine Ad">Magazine Ad</option>
+						<option value="Radio Ad">Radio Ad</option>
+						<option value="TV Ad">TV Ad</option>
+						<option value="Word of Mouth">Word of Mouth</option>
+						<option value="Other">Other</option>
+					</select>
+
+					Questions or comments for our sales representatives?
+					<textarea name="questions" size="30" rows="5"></textarea>
+					<!-- ZACS CODE -->
+					<input id="submitbtn" type="submit" name="submit" value="Submit Now">
+
+					<!-- WIDGET CODE -->
+					<!-- <div class="widget">
+						<h1>Widget Buttons</h1>
+						<button>A button element</button>
+
+						<input type="submit" value="A submit button">
+
+						<a href="#">An anchor</a> -->
+
+						<!-- L CODE -->
+						<!-- <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" value="Lamar">
+					</div> -->
+					
+					<!-- WIDGET CODE for CSS -->
+					<!-- <h1>CSS Buttons</h1>
+					<button class="ui-button ui-widget ui-corner-all">A button element</button>
+
+					<input class="ui-button ui-widget ui-corner-all" type="submit" value="SButton">
+
+					<a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a> -->
+				</fieldset>
+			</form>
+		</section>
+
+
+		<section id="testimonials" class="five columns">
+			<h4>Map</h4>
+			<p>&nbsp;</p>
+
+		</section>
+	</main>
+</body>
+
+</html>
