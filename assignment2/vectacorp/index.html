@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- JQUERY -->
+	<!-- <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+		rel = "stylesheet"> -->
+	<!-- JQ CSS -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<!-- css modifications by karen -->
+	<link rel="stylesheet" href="css/karen.css">
+
+	<!-- jquery and jqueryui-->
+	<script src="/assignment2/vectacorp/js/jquery-3.5.0.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			// <!--  Step 1 - GENERAL - add tooltip widget to each nav item -->
+			$(function () {
+				$("#responsive-menu").tooltip(); //can also use .navitems or #responsive-menu li
+				// $(document).tooltip();//to have all tooltips thru out site be the same
+			});
+
+			//Step 2 - TABS
+			$(function () {
+				$("#tabs").tabs();
+			});
+
+			//Step 3 - ACCORDIAN
+			$(function () {
+				$("#accordion").accordion();
+			});
+
+		}); //closing for document ready line 22
+	</script>
+
+	<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	<!-- zac script for mobilemenu -->
+	<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script>
+		$(document).ready(function(){//moved to line 22
+		$('#responsive-menu').mobileMenu();
+		});		
+	</script>
+
+</head>
+
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<!--  GENERAL - add tooltip widget to each nav item -->
+				<li class="navitems" title='Find everything you need under one roof'><a href="index.html">Home</a></li>
+				<li class="navitems" title="Who we are, what we do"><a href="aboutus.html">About Us</a></li>
+				<li class="navitems" title="We have the perfect solution for your needs"><a
+						href="solutions.html">Solutions</a></li>
+				<li class="navitems" title="Help! When you need somebody..."><a href="support.html">Support</a></li>
+				<li class="navitems" title="Talk to us"><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+
+		<section id="welcome" class="five columns">
+			<h4>Welcome</h4>
+
+			<p>With innovative approaches and advanced methodologies, Vecta Corporation provides scalable business
+				solutions to help companies achieve success through revenue increase, cost management, and user
+				satisfaction. Our approach stems from the three most important business growth aspects: helping
+				companies reach prospects, assist in converting prospects to customers, and assist in retaining those
+				customers. This is accomplished through our interactive solutions and expertise in providing a memorable
+				and positive user experience.</p>
+		</section>
+
+		<section id="solutions" class="six columns">
+			<h4>Our Solutions</h4>
+
+			<!-- Step 2 - INSERT TABS HERE -->
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">vProspect 2.0</a></li>
+					<li><a href="#tabs-2">vConvert 2.0</a></li>
+					<li><a href="#tabs-3">vRetain 1.0</a></li>
+				</ul>
+				<div id="tabs-1">
+					<img src="/assignment2/vectacorp/images/logo_vprospect.gif" alt="vProspect logo">
+					<p>Define and research your target audience, define your strategy to reach that audience and present
+						a strong and memorable brand to that audience.</p>
+				</div>
+				<div id="tabs-2">
+					<img src="/assignment2/vectacorp/images/logo_vconvert.gif" alt="vConvert logo">
+					<p>Create a highly user-friendly and easy-to-navigate information architecture that will help your
+						prospects interact with the company on a highly interactive level.</p>
+				</div>
+				<div id="tabs-3">
+					<img src="/assignment2/vectacorp/images/logo_vretain.gif" alt="vRetain logo">
+					<p>Build on existing customer relationships to improve productivity and maximize customer loyalty,
+						while growing revenues.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="testimonials" class="five columns">
+			<h4>Client Testimonials</h4>
+
+			<!-- Step 3 -  INSERT ACCORDION HERE -->
+
+			<div id="accordion">
+				<h3>Chevy Dealers Assc</h3>
+				<div>
+					<p>
+						Throughout the years we have worked with Vecta Corporation, we have always been amazed at the
+						level of dedication and professionalism that they have provided us and our WGDC products. It is
+						this commitment that has increased both our income and exposure exponentially.
+					</p>
+					<p>
+						Iona Ford<br>
+						President<br>
+						Chevy Dealers Association
+					</p>
+				</div>
+				<h3>Profits Financial, Inc</h3>
+				<div>
+					<p>
+						Incredible results from an incredible effort by the Vecta Corporation team! We are very pleased
+						with the business benefits we have rceived by working with them.
+					</p>
+					<p>
+						Robin Banks<br>
+						CEO<br>
+						Profits Financial, Inc.
+					</p>
+				</div>
+			</div>
+	
+
+		</section>
+	</main>
+
+	<!-- <p>
+		<a href="#" title="That&apos;s what this widget is">Tooltips</a>
+		can be attached to any element. When you hover
+		the element with your mouse, the title attribute is displayed in a little box next to the element, just like a
+		native tooltip.
+	</p>
+	<p>
+		But as it's not a native tooltip, it can be styled. Any themes built with
+		<a href="http://jqueryui.com/themeroller/"
+			title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+		will also style tooltips accordingly.
+	</p>
+	<p>
+		Tooltips are also useful for form elements, to show some additional information in the context of each field.
+	</p>
+	<p>
+		<label for="age">Your age:</label>
+		<input id="age" title="We ask for your age only for statistical purposes.">
+	</p>
+	<p>
+		Hover the field to see the tooltip.
+	</p> -->
+
+</body>
+
+</html>
