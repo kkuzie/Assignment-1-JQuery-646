@@ -1,0 +1,172 @@
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: .5em 2.5px;
+}
+.ui-widget-header {
+    background: #CC1C0D;
+    /* border: none; */
+}
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: .2em 0 0 4.5px;
+}
+
+/* ui css additions*/
+/* for vertical tabs */
+.ui-tabs-vertical { width: 55em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+
+/* Step 9 - dropdown menu */
+fieldset {
+    border: 0;
+  }
+  label {
+    display: block;
+    margin: 30px 0 0 0;
+  }
+  .overflow {
+    height: 200px;
+  }
+
+  /* QUICK NAV-sticky nav */
+
+  .active {
+    /* color: #fff !important; */
+    /* text-decoration: underline !important; */
+    background: #007bff;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); /* hardware acceleration of CSS animation*/
+}
+.header nav ul li {
+    padding: 10px 10px;
+    /* font-size: 130%; */
+    text-decoration: none;
+    color: #CC1C0D;
+    background: aliceblue;
+    border-radius: 3px;
+    float: left;
+    min-width: 150px;
+    text-align: center;
+}
+.header nav ul li:hover, .header nav ul li a:hover {
+    background: #007bff;
+}
+/* .header nav ul li a {
+    padding: 10px 10px;
+    width: 150px;
+    height: 50px;
+} */
+/* .header nav ul li:active, .header nav ul li a:active{
+    background: #007bff;
+} */
+/* .active li {
+    background: #007bff;
+} */
+/* .active:active {
+    background: #007bff;
+} */
+/* nav ul li a, nav ul li a:visited  */
+
+/* .container .five.columns {
+    width: 225px;
+} */
+/* BACK TO TOP */
+/* .totop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+    background: #a05b7e;
+    color: #fff;
+    border-radius: 25px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    font-size: 18px;
+  } */
+
+  /* BACK TO TOP */
+  /* #backTop {
+      /* width: 250px;
+      height: 250px;
+      border-radius: 50%; */
+      /* background: crimson;
+      right: 400px; */
+      /* color: aliceblue; */
+  /* } */ 
+
+
+  /*Main stylesheet for Backtop jQuery Plugin */
+#backTop{
+    width:35px;
+    height:35px;
+    padding:10px;
+    border-radius:4px;
+    text-indent:-9999px;
+    cursor:pointer;
+    z-index:999999999;
+	display:none;
+	box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+
+}
+#backTop.white{
+     background:url(../img/uparr-48-b.png) no-repeat center center rgba(255,255,255,0.8);
+    border:1px solid #ccc;
+}
+#backTop.black{
+     background:url(../img/uparr-48-w.png) no-repeat center center rgba(0,0,0,0.8); 
+    border:1px solid #ccc;
+}
+#backTop.red{
+     background:url(../img/uparr-48-w.png) no-repeat center center rgba(217,97,81,0.9); 
+    border:1px solid #fff;
+     right: 400px;
+}
+#backTop.green{
+     background:url(../img/uparr-48-b.png) no-repeat center center rgba(81,217,187,0.9); 
+    border:1px solid #fff;
+}
+ 
+/* cycle 2  */
+/* prev / next links */
+.cycle-prev, .cycle-next { 
+    position: absolute; 
+    top: 0; 
+    width: 30%; 
+    opacity: 0; 
+    filter: alpha(opacity=0); 
+    z-index: 800; 
+    height: 100%; 
+    cursor: pointer; 
+}
+.cycle-prev { 
+    left: 0;  
+    background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;
+    margin-left: 200px;
+}
+.cycle-next { 
+    right: 0; 
+    background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;
+    margin-right: -50px;
+}
+.cycle-prev:hover, .cycle-next:hover { 
+    opacity: .7; 
+    filter: alpha(opacity=70) 
+}
+
+.disabled { 
+    opacity: .5; 
+    filter:alpha(opacity=50);
+}
+.cycle-slide {
+    margin-left: 250px;
+    margin-bottom: 50px;
+}
